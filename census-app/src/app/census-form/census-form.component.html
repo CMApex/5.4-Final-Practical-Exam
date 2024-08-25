@@ -1,0 +1,13 @@
+<div>
+    <h2>{{editMode ? 'Update' : 'Add'}} Census Record</h2>
+    <form (ngSubmit)="onSubmit()">
+        <input [(ngModel)]="record.year" name="year" placeholder="Year" required />
+        <input [(ngModel)]="record.censusTakerName" name="censusTakerName" placeholder="Census Taker's Name" required />
+        <input [(ngModel)]="record.numberOfPeople" name="numberOfPeople" placeholder="Number of People in Household" required />
+        <input [(ngModel)]="record.householdAddress.street" name="street" placeholder="Street" required />
+        <input [(ngModel)]="record.householdAddress.city" name="city" placeholder="City" required />
+        <input [(ngModel)]="record.householdAddress.state" name="state" placeholder="State" required />
+        <input [(ngModel)]="record.householdAddress.zipCode" name="zipCode" placeholder="Zip Code" required />
+        <button type="submit">{{editMode ? 'Update' : 'Add'}} Record</button>
+    </form>
+</div>
